@@ -32,9 +32,9 @@ namespace lab2
             
             try
             {
-                RomanNumber x = new(5);
-                RomanNumber y = new(20);
-                RomanNumber c = new(3);
+                RomanNumber x = new(7);
+                RomanNumber y = new(1000);
+                RomanNumber c = new(40);
                 RomanNumber z = new(2);
                 RomanNumber res;
                 RomanNumber[] mas = { x, y, c, z };
