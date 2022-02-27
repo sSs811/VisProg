@@ -53,11 +53,9 @@ public class HW1
 
                 ch= ch + 1;
                }
-
-               vv=ch/n ;
-               Console.WriteLine("Время обслуживания: ");
-               Console.WriteLine(vv);
-              return 0;
+              
+              return ch/n;
+              
              }
 
             else if (ix < 2)
