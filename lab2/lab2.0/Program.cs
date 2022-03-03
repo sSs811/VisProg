@@ -10,7 +10,7 @@ namespace lab2
     {
         static void Main(string[] args)
         {
-            try 
+            try
             {
                 RomanNumber a = new(0);
             }
@@ -19,7 +19,7 @@ namespace lab2
                 Console.WriteLine(exp.Message);
             }
 
-            try 
+            try
             {
                 RomanNumber a = new(10);
                 RomanNumber b = new(20);
@@ -29,7 +29,7 @@ namespace lab2
             {
                 Console.WriteLine(exp.Message);
             }
-            
+
             try
             {
                 RomanNumber x = new(7);
@@ -44,7 +44,7 @@ namespace lab2
                 Console.WriteLine($"{c} / {z} = {res}");
                 res = y - x;
                 Console.WriteLine($"{y} - {x} = {res}");
-                res = c * d;
+                res = c * z;
                 Console.WriteLine($"{c} * {z} = {res}");
                 Console.WriteLine("Массив:");
                 foreach (RomanNumber num in mas)
