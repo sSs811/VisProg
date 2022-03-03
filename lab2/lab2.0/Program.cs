@@ -23,7 +23,7 @@ namespace lab2
             {
                 RomanNumber a = new(10);
                 RomanNumber b = new(20);
-                RomanNumber.Sub(a, b);
+                a -= b;
             }
             catch (RomanNumberException exp)
             {
@@ -38,13 +38,13 @@ namespace lab2
                 RomanNumber z = new(2);
                 RomanNumber res;
                 RomanNumber[] mas = { x, y, c, z };
-                res = RomanNumber.Add(x, y);
+                res = x + y;
                 Console.WriteLine($"{x} + {y} = {res}");
-                res = RomanNumber.Div(c, z);
+                res = c / z;
                 Console.WriteLine($"{c} / {z} = {res}");
-                res = RomanNumber.Sub(y, x);
+                res = y - x;
                 Console.WriteLine($"{y} - {x} = {res}");
-                res = RomanNumber.Mul(c, z);
+                res = c * d;
                 Console.WriteLine($"{c} * {z} = {res}");
                 Console.WriteLine("Массив:");
                 foreach (RomanNumber num in mas)
