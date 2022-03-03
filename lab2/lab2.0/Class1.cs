@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab2
 {
-    internal class RomanNumber : ICloneable, IComparable
+    public class RomanNumber : ICloneable, IComparable
     {
         private string rom;
         private ushort arab;
@@ -24,13 +24,13 @@ namespace lab2
                 this.rom = "";
             }
         }
-
-        public static RomanNumber Add(RomanNumber? n1, RomanNumber? n2)//Сложение римских чисел
+        
+        public static RomanNumber operator +(RomanNumber? n1, RomanNumber? n2)//Сложение римских чисел
         {
             return new RomanNumber((ushort)(n1.arab + n2.arab));
         }
 
-        public static RomanNumber Sub(RomanNumber? n1, RomanNumber? n2)//Вычитание римских чисел
+        public static RomanNumber operator -(RomanNumber? n1, RomanNumber? n2)//Вычитание римских чисел
         {
             if (0 >= n1.arab - n2.arab)
                 throw new RomanNumberException("Значение вычитания <= 0.");
@@ -38,12 +38,12 @@ namespace lab2
                 return new RomanNumber((ushort)(n1.arab - n2.arab));
         }
 
-        public static RomanNumber Mul(RomanNumber? n1, RomanNumber? n2)//Умножение римских чисел
+       public static RomanNumber operator *(RomanNumber? n1, RomanNumber? n2)//Умножение римских чисел
         {
             return new RomanNumber((ushort)(n1.arab * n2.arab));
         }
 
-        public static RomanNumber Div(RomanNumber? n1, RomanNumber? n2)//Целочисленное деление римских чисел
+        public static RomanNumber operator /(RomanNumber? n1, RomanNumber? n2)//Целочисленное деление римских чисел
         {
             if ((n1.arab / n2.arab) <= 0)
                 throw new RomanNumberException("Значение деления <= 0.");
