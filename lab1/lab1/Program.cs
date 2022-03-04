@@ -45,7 +45,7 @@ public class HW1
           if (kass[i] == 0)
            {
 
-            if (2<=ix && kass.Max() == 0)
+            if (customers.Length - 1<=ix && kass.Max() == 0)
              {
 
               while(ch % n != 0)
@@ -58,7 +58,7 @@ public class HW1
               
              }
 
-            else if (ix < 2)
+            else if (ix < customers.Length - 1)
              {
               kass[i] = customers[ix+1];
               ix+= 1;
